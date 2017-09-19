@@ -10,3 +10,33 @@
  + run `docker-compose build` to build containers
  + run `docker-compose up` to start app
  + your app should be available at `127.0.0.1:8099`
+
+
+## Usage with standalone container
+
+````yaml
+version: "2"
+services:
+
+    app:
+        image: newoldmax/social_tournament
+        depends_on:
+            - database
+        ports:
+            - 0.0.0.0:8099:9000
+        env_file: .env
+
+    database:
+        image: postgres:9.4
+        env_file: .env
+        environment:
+            - PGPASSWORD=example
+        ports:
+            - "5432"
+        volumes:
+            - dbdata:/var/lib/postgresql
+
+volumes:
+    dbdata:
+        driver: local
+````

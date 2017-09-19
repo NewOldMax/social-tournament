@@ -1,4 +1,4 @@
-### Social tournament test task
+# Social tournament test task
 
 ## Installation
 
@@ -40,3 +40,7 @@ volumes:
     dbdata:
         driver: local
 ````
+
+## Possible issues
+As `points` have a `float64` type, some rounding errors may happen in cases 100 / 3 = 33.333333333.
+It can be fixed to going under `decimal` type and improve calculations based on customer requirements

@@ -1,0 +1,38 @@
+# IDE and dev tools specific files
+.idea
+*.iml
+.vagrant
+node_modules
+.DS_Store
+
+!.gitkeep
+
+.env
+
+bin/
+pkg/
+src/github.com/
+src/golang.org/
+src/gopkg.in/
+src/tmp/
+src/routes/
+
+.gvm_local
+
+*.log
+/nbproject
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
